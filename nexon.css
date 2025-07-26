@@ -451,10 +451,15 @@ body.dark-mode .contact-form textarea {
 
 /* foot with a ter */
 .footer {
-  background-color: #222;
-  color: var(--text-light);
+  background-color: white;
+  color: #222;
   padding: 3rem 2rem 1rem;
-  border-radius: 30px\;
+  border-radius: 30px;
+}
+
+body.dark-mode .footer {
+  background-color: #222;
+  color: var(--text-light); /* Or use #f5f5f5 if no variable set */
 }
 
 .footer-content {
