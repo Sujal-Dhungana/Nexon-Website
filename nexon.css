@@ -454,7 +454,7 @@ body.dark-mode .contact-form textarea {
   background-color: #222;
   color: var(--text-light);
   padding: 3rem 2rem 1rem;
-  border-radius: 30px;
+  border-radius: 30px\;
 }
 
 .footer-content {
@@ -792,11 +792,22 @@ header{
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
-.listProduct .item{
-    background-color: #3b3b3b;
-    padding: 20px;
-    border-radius: 20px;
+
+/* light mode card */
+.listProduct .item {
+  background-color: #c6c3c3; 
+  padding: 20px;
+  border-radius: 20px;
+  color: #000; 
 }
+
+/* Dark background */
+body.dark-mode .listProduct .item {
+  background-color: #3b3b3b; 
+  color: #fff; 
+}
+
+
 .listProduct .item h2{
     font-weight: 500;
     font-size: large;
@@ -860,7 +871,7 @@ body.showCart .container{
 }
 .listCart .item img{
     width: 100%;
-     ;
+    border-radius: 100px;
 }
 .listCart .item{
     display: grid;
