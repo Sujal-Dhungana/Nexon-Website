@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXON - PC Parts</title>
+  <link rel="stylesheet" href="car.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem auto;
+  justify-content: center;
+}
+
+.search-bar input {
+  padding: 0.6rem 1rem;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+.search-bar button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+  </style>
+</head>
+<body>
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search products..." oninput="filterProducts()">
+</div>
+
+
+     
+        <button id="toggletheme" class="theme-toggle">
+          
+        </button>
+        <a href="#cart" class="cart-icon">
+      
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+
+
+  <!-- Products Section -->
+  <section id="products" class="products-section">
+    <div class="section-header">
+      <h2 class="text-center">Available Products</h2>
+      <p class="text-center">All the High-Performance PC Parts You Need</p>
+    </div>
+
+    <div class="product-container">
+      <!-- CPU -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://m.media-amazon.com/images/I/61ujd7RN-3L.jpg" alt="Intel Core i9 14900K">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Intel Core i9 14900K</h3>
+          <p class="card-text">The Intel Core i9 14900K is a high-performance processor designed for gaming and content creation.</p>
+          <p class="card-price"><strong>$699.99</strong></p>
+          <button class="btn-primary">Add To Cart</button>
+        </div>
+      </div>
+
+        <div class="product-card">
+        <div class="product-image">
+          <img src="https://img.terabyteshop.com.br/produto/g/processador-amd-ryzen-7-9800x3d-47ghz-52ghz-turbo-8-cores-16-threads-am5-sem-cooler-100-1000001084wof_217275.jpg" alt="Ryzen 7 9700x3D">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Ryzen 7 9700x3D</h3>
+          <p class="card-text">The Ryzen 7 9700x3D is a high-performance processor designed for gaming and content creation.</p>
+          <p class="card-price"><strong>$674.99</strong></p>
+          <button class="btn-primary">Add To Cart</button>
+        </div>
+      </div>
+
+        <div class="product-card">
+        <div class="product-image">
+          <img src="https://m.media-amazon.com/images/I/51f2hkWjTlL.jpg" alt="Ryzen 5 5600G">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Ryzen 5 5600G</h3>
+          <p class="card-text">The Ryzen 5 5600G is a high-performance processor designed for gaming and content creation.</p>
+          <p class="card-price"><strong>$149.99</strong></p>
+          <button class="btn-primary">Add To Cart</button>
+        </div>
+      </div>
+
+        <div class="product-card">
+        <div class="product-image">
+          <img src="https://www.tradeinn.com/f/13946/139462012/intel-core-i5-13600k-5.1ghz-cpu.webp" alt="Intel i5 13600K">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Intel i5 13600K</h3>
+          <p class="card-text">The Intel i5 13600K is a high-performance processor designed for gaming and content creation.</p>
+          <p class="card-price"><strong>$449.99</strong></p>
+          <button class="btn-primary">Add To Cart</button>
+        </div>
+      </div>
+
+      
+
+      <!-- GPU -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://images.nvidia.com/aem-dam/Solutions/geforce/ada/rtx-4090/geforce-rtx-4090-product-gallery-full-screen-3840-3.jpg" alt="NVIDIA RTX 4090">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">NVIDIA RTX 4090</h3>
+          <p class="card-text">The NVIDIA RTX 4090 is a powerful graphics card that delivers exceptional performance for gaming and creative applications.</p>
+          <p class="card-price"><strong>$1,499.99</strong></p>
+          <button class="btn-primary">Add To Cart</button>
+        </div>
+      </div>
+
+            <div class="product-card">
+        <div class="product-image">
+          <img src="https://pg.asrock.com/Graphics-Card/photo/Radeon%20RX%207900%20XT%20Phantom%20Gaming%2020GB%20OC(L3).png" alt="AMD Radeon RX 7900 XT">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">AMD Radeon RX 7900 XT</h3>
+          <p class="card-text">The AMD Radeon RX 7900 XT is a powerful graphics card that delivers exceptional performance for gaming and creative applications.</p>
+          <p class="card-price"><strong>$999.99</strong></p>
+          <button class="btn-primary">Add To Cart</button>
+        </div>
+      </div>
+
+            <div class="product-card">
+        <div class="product-image">
+          <img src="https://www.phoronix.net/image.php?id=nvidia-rtx-3060ti&image=nvidia_rtx3060ti_1" alt="NVIDIA RTX 3060ti">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">NVIDIA Rtx 3060ti</h3>
+          <p class="card-text">The NVIDIA Rtx 3060ti is a powerful graphics card that delivers exceptional performance for gaming and creative applications.</p>
+          <p class="card-price"><strong>$499.99</strong></p>
+          <button class="btn-primary">Add To Cart</button>
+        </div>
+      </div>
+
+            <div class="product-card">
+        <div class="product-image">
+          <img src="https://cdn.mos.cms.futurecdn.net/ToWusDUNRwTsKqWZewiSVh-1200-80.jpg" alt="Intel Arc">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Intel Arc</h3>
+          <p class="card-text">The Intel Arc is a powerful graphics card that delivers exceptional performance for gaming and creative applications.</p>
+          <p class="card-price"><strong>$249.99</strong></p>
+          <button class="btn-primary">Add To Cart</button>
+        </div>
+      </div>
+
+      <!-- RAM -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://plecom.imgix.net/iil-238728-643444.jpg?fit=fillmax&fill=solid&fill-color=ffffff&auto=format&w=1000&h=1000" alt="Corsair Vengeance RGB Pro 32GB">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Corsair Vengeance RGB Pro 32GB</h3>
+          <p class="card-text">High-performance DDR4 memory optimized for AMD and Intel motherboards with RGB lighting.</p>
+          <p class="card-price"><strong>$129.99</strong></p>
+          <button class="btn-primary">Add To Cart</button>
+        </div>
+      </div>
+
+      <!-- Motherboard -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://storage-asset.msi.com/global/picture/image/feature/mb/B760M/PRO-B760M-E-DDR4/images/storage.png" alt="MSI PRO B760M-E DDR4">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">MSI PRO B760M-E DDR4</h3>
+          <p class="card-text">Premium motherboard with advanced cooling, PCIe 5.0, and WiFi 6E for high-end gaming builds.</p>
+          <p class="card-price"><strong>$549.99</strong></p>
+          <button class="btn-primary">Add To Cart</button>
+        </div>
+      </div>
+
+            <div class="product-card">
+        <div class="product-image">
+          <img src="https://m.media-amazon.com/images/I/81gqqKQVkAL._AC_SL1500_.jpg" alt="ASUS ROG Maximus Z790">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">ASUS ROG Maximus Z790</h3>
+          <p class="card-text">Premium motherboard with advanced cooling, PCIe 5.0, and WiFi 6E for high-end gaming builds.</p>
+          <p class="card-price"><strong>$549.99</strong></p>
+          <button class="btn-primary">Add To Cart</button>
+        </div>
+      </div>
+
+            <div class="product-card">
+        <div class="product-image">
+          <img src="https://dlcdnwebimgs.asus.com/gain/ffbc915b-3244-4c45-ab80-f4fb12526e32/" alt="ASUS Prime Z790-P WiFi D4 Gaming Desktop Motherboard">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">ASUS Prime Z790-P WiFi D4 Gaming Desktop Motherboard</h3>
+          <p class="card-text">Premium motherboard with advanced cooling, PCIe 5.0, and WiFi 6E for high-end gaming builds.</p>
+          <p class="card-price"><strong>$549.99</strong></p>
+          <button class="btn-primary">Add To Cart</button>
+        </div>
+      </div>
+
+      <!-- SSD -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://m.media-amazon.com/images/I/61S4fCwCigL.jpg" alt="Samsung 990 PRO 2TB">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Samsung 990 PRO 2TB</h3>
+          <p class="card-text">Ultra-fast NVMe SSD with read speeds up to 7,450 MB/s for instant loading and file transfers.</p>
+          <p class="card-price"><strong>$189.99</strong></p>
+          <button class="btn-primary">Add To Cart</button>
+        </div>
+      </div>
+
+      <!-- Power Supply -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://thumbor.arvutitark.ee/Giq6rfmA_KtG42tw1kpxrdRy5Xs=/trim/fit-in/800x800/https%3A%2F%2Fstatic.arvutitark.ee%2Fpublic%2Fmedia-hub-olev%2F2024%2F09%2F654057%2F0-55346700-1725688340.jpg" alt="Corsair RM1000x">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Corsair RM1000x</h3>
+          <p class="card-text">Fully modular power supply with 80 PLUS Gold efficiency for reliable power delivery.</p>
+          <p class="card-price"><strong>$199.99</strong></p>
+          <button class="btn-primary">Add To Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="section-header">
+      <h2>About NEXON</h2>
+    </div>
+    <div class="about-content">
+      <div class="about-text">
+        <p>NEXON is your premier destination for high-quality PC components. We specialize in providing enthusiasts and professionals with the latest and most powerful hardware for custom PC builds.</p>
+        <p>Our team of experts carefully selects each product to ensure you get the best performance, reliability, and value for your investment.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h3>NEXON</h3>
+        <p>Next Generation PC Parts</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 NEXON. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="car.js"></script>
+
+  <script>
+function filterProducts() {
+  const input = document.getElementById('searchInput').value.toLowerCase().trim();
+  const productCards = document.querySelectorAll('.product-card');
+
+  productCards.forEach(card => {
+    const title = card.querySelector('.card-title').textContent.toLowerCase();
+    const description = card.querySelector('.card-text').textContent.toLowerCase();
+
+    if (title.includes(input) || description.includes(input)) {
+      card.style.display = '';  // Show the card
+    } else {
+      card.style.display = 'none';  // Hide the card
+    }
+  });
+}
+
+
+  </script>
+</body>
+</html>

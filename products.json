@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name":" NVIDIA GEFORCE RTX 5090",
+        "price": 2000,
+        "image": "https://storage-asset.msi.com/global/picture/image/feature/vga/NVIDIA/new-gen/gb202-300-gaming-trio/images/kv_vga.png"
+    },
+    {
+        "id": 2,
+        "name":" NVIDIA GEFORCE RTX 3090TI",
+        "price": 250,
+        "image": "https://storage-asset.msi.com/global/picture/image/feature/vga/NVIDIA/RTX-3090-Ti-BLACK-TRIO-24G/images/vga-body-3090Ti-Black.png"
+    },
+    {
+        "id": 3,
+        "name":" Intel CORE I9 13900K",
+        "price": 290,
+        "image": "https://i0.wp.com/esgaming.co.ke/wp-content/uploads/2023/04/Core-i9-13900K-Processor.webp?fit=1080%2C1080&ssl=1"
+    },
+    {
+        "id": 4,
+        "name":" Ryzen 9 7950X",
+        "price": 200,
+        "image": "https://image-cdn.jambuntech.dev/KlPDr6wfgJSATyS9wSiNMdBa4Xp6EXOnJnlVWXAG/1920x/filters:format(webp)/tk/1_f59044ff0c.png"
+    },
+    {
+        "id": 5,
+        "name":" Intel I3 12100F",
+        "price": 300,
+        "image": "https://image-cdn.jambuntech.dev/JX2pmZqx1p3dcJLg8MCpgXzq-9UVaXWEEhBIVaCw/1920x/filters:format(webp)/tk/2_4df215ca1c.png"
+    },
+    {
+        "id": 6,
+        "name":" Radeon RX 7900 XT",
+        "price": 200,
+        "image": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/2249/innergigabyteimages/kfimg.png"
+    },
+    {
+        "id": 7,
+        "name":" ASUS ROG STRIX B550-F GAMING",
+        "price": 200,
+        "image": "https://dlcdnimgs.asus.com/websites/global/products/uri12btqafuvwte6/img/kv/pd.png"
+    },
+    {
+        "id": 8,
+        "name":" MSI MAG B550 TOMAHAWK",
+        "price": 200,
+        "image": "https://asset.msi.com/resize/image/global/product/product_16492305296ff2084c3e2e35c03546e01e5e2bf0c9.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
+    }
+
+]

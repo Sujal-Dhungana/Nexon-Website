@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up - NEXON</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .signup-box {
+      background-color: #1e1e1e;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 320px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.4);
+    }
+
+    .signup-box h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .signup-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 5px;
+      background: #2c2c2c;
+      color: #fff;
+    }
+
+    .signup-box button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 1rem;
+      background-color: orange;
+      color: black;
+      border: none;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .signup-box button:hover {
+      background-color: gold;
+    }
+
+    .error, .success {
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .error {
+      color: red;
+    }
+
+    .success {
+      color: lightgreen;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .login-link a {
+      color: orange;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="signup-box">
+  <h2>Create Account</h2>
+  <input type="text" id="newUsername" placeholder="Username" required>
+  <input type="password" id="newPassword" placeholder="Password" required>
+  <input type="email" id="newEmail" placeholder="Email" required>
+  <button onclick="registerUser()">Sign Up</button>
+  <p id="message" class="error"></p>
+  <div class="login-link">
+    Already have an account? <a href="login.html">Sign In</a>
+  </div>
+</div>
+
+
+<script>
+  function registerUser() {
+    const username = document.getElementById("newUsername").value.trim();
+    const password = document.getElementById("newPassword").value.trim();
+    const message = document.getElementById("message");
+
+    if (username === "" || password === "") {
+      message.textContent = "Please fill in all fields.";
+      return;
+    }
+
+    let users = JSON.parse(localStorage.getItem("users")) || {};
+
+    if (users[username]) {
+      message.textContent = "Username already exists!"; //if the user already exists and if you try to create a new account using that unername
+      return;
+    }
+
+    users[username] = {
+      password: password,
+      role: "user",
+      cart: []
+    };
+
+    localStorage.setItem("users", JSON.stringify(users));
+    message.textContent = "";
+    message.className = "success";
+    message.textContent = "Account created! Redirecting...";
+
+    setTimeout(() => {
+      window.location.href = "login.html";
+    }, 1500);
+  }
+
+      function saveUser() {
+      const name = document.getElementById("usernameInput").value.trim();
+      localStorage.setItem("username", name);
+      alert("Saved successfully!");
+    }
+
+    function loadUser() {
+      const name = localStorage.getItem("username");
+      document.getElementById("result").textContent = name
+        ? `Hello, ${name}!`
+        : "No user saved yet.";
+    }
+</script>
+
+</body>
+</html>

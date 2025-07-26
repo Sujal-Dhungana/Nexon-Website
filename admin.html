@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel - NEXON</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 1rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .user-card {
+      background-color: #1e1e1e;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    .user-card h3 {
+      margin: 0;
+    }
+
+    .user-card ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .user-card .empty {
+      font-style: italic;
+      color: #aaa;
+    }
+
+    .btn {
+      padding: 6px 12px;
+      margin-top: 8px;
+      background-color: crimson;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: red;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .back-link a {
+      color: orange;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🛠️ Admin Panel</h1>
+  <div id="admin-content"></div>
+
+  <div class="back-link">
+    <a href="car.html">← Back to Website</a>
+  </div>
+
+  <script>
+    const currentUser = localStorage.getItem("currentUser");
+    const users = JSON.parse(localStorage.getItem("users")) || {};
+    const content = document.getElementById("admin-content");
+
+    if (!currentUser || !users[currentUser] || users[currentUser].role !== "admin") {
+      content.innerHTML = "<p>Access Denied. This page is for admins only.</p>"; //this will stop people who are not an admin to go to the admin panel
+    } else {
+      Object.keys(users).forEach(username => {
+        const user = users[username];
+        const userCard = document.createElement("div");
+        userCard.className = "user-card";
+
+        const cartItems = user.cart && user.cart.length > 0
+          ? `<ul>${user.cart.map(item => `<li>${item}</li>`).join("")}</ul>`
+          : '<p class="empty">Cart is empty</p>';
+
+        userCard.innerHTML = `
+          <h3>👤 ${username} <span style="font-size: 0.8em; color: gray;">(${user.role})</span></h3>
+          <strong>Cart:</strong>
+          ${cartItems}
+        `;
+
+        content.appendChild(userCard);
+      });
+    }
+  </script>
+</body>
+</html>
