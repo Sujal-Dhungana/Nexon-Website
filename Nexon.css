@@ -454,6 +454,7 @@ body.dark-mode .contact-form textarea {
   background-color: #222;
   color: var(--text-light);
   padding: 3rem 2rem 1rem;
+  border-radius: 30px;
 }
 
 .footer-content {
